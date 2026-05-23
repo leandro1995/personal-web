@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <!-- Definitions for gradients, shadows & filters -->
+  <defs>
+    <!-- Background Mesh Glows -->
+    <radialGradient id="androidGlow" cx="20%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#3DDC84" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#3DDC84" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="kotlinGlow" cx="80%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#7F52FF" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#7F52FF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0A66C2" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#0A66C2" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Linear Gradients for UI Elements -->
+    <linearGradient id="phoneBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DDC84" />
+      <stop offset="50%" stop-color="#0A66C2" />
+      <stop offset="100%" stop-color="#7F52FF" />
+    </linearGradient>
+    <linearGradient id="phoneBodyDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="kotlinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E44857" />
+      <stop offset="50%" stop-color="#C159B3" />
+      <stop offset="100%" stop-color="#7F52FF" />
+    </linearGradient>
+    <linearGradient id="firebaseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA611" />
+      <stop offset="100%" stop-color="#F5820D" />
+    </linearGradient>
+    <linearGradient id="androidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DDC84" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Backdrops -->
+  <rect width="800" height="600" fill="none" />
+  <circle cx="200" cy="200" r="300" fill="url(#androidGlow)" />
+  <circle cx="650" cy="400" r="300" fill="url(#kotlinGlow)" />
+  <circle cx="400" cy="300" r="250" fill="url(#blueGlow)" />
+
+  <!-- Code / Tech Grid Background Accent -->
+  <g opacity="0.08">
+    <path d="M 50,0 L 50,600 M 100,0 L 100,600 M 150,0 L 150,600 M 200,0 L 200,600 M 250,0 L 250,600 M 300,0 L 300,600 M 350,0 L 350,600 M 400,0 L 400,600 M 450,0 L 450,600 M 500,0 L 500,600 M 550,0 L 550,600 M 600,0 L 600,600 M 650,0 L 650,600 M 700,0 L 700,600 M 750,0 L 750,600" stroke="#94A3B8" stroke-width="1" stroke-dasharray="4,8" />
+    <path d="M 0,50 L 800,50 M 0,100 L 800,100 M 0,150 L 800,150 M 0,200 L 800,200 M 0,250 L 800,250 M 0,300 L 800,300 M 0,350 L 800,350 M 0,400 L 800,400 M 0,450 L 800,450 M 0,500 L 800,500 M 0,555 L 800,555" stroke="#94A3B8" stroke-width="1" stroke-dasharray="4,8" />
+  </g>
+
+  <!-- Main Isometric Smartphone Centerpiece -->
+  <g transform="translate(140, 20) scale(1.1)" filter="url(#softShadow)">
+    <!-- Smartphone Bezel (Sleek Outer Frame) -->
+    <rect x="120" y="50" width="280" height="480" rx="40" fill="url(#phoneBorder)" opacity="0.85" />
+    <!-- Smartphone Body Inner -->
+    <rect x="124" y="54" width="272" height="472" rx="36" fill="url(#phoneBodyDark)" />
+
+    <!-- Speaker Bar -->
+    <rect x="220" y="68" width="80" height="6" rx="3" fill="#64748B" opacity="0.6" />
+    <!-- Front Camera Hole -->
+    <circle cx="190" cy="71" r="4" fill="#1E293B" />
+
+    <!-- Screen Content Safe Area -->
+    <g transform="translate(136, 90)">
+      <rect width="248" height="422" rx="20" fill="#0B132B" opacity="0.95" />
+
+      <!-- Android IDE Header Pattern -->
+      <path d="M 0,0 L 248,0 L 248,45 L 0,45 Z" fill="#111B33" />
+      <circle cx="15" cy="22" r="4" fill="#EF4444" />
+      <circle cx="27" cy="22" r="4" fill="#F59E0B" />
+      <circle cx="39" cy="22" r="4" fill="#10B981" />
+      
+      <text x="60" y="26" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" fill="#64748B" font-weight="500">AndroidApp / MainActivity.kt</text>
+      
+      <!-- Inside Mobile Screen: Layout / Visual Elements -->
+      <!-- App Header mock -->
+      <rect x="16" y="60" width="216" height="45" rx="10" fill="#1E293B" opacity="0.6" />
+      <!-- Android Logo Floating Inside Phone Screen -->
+      <g transform="translate(110, 115) scale(0.65)">
+        <path d="M12,41C28,41,41,28,41,12C41,-4,28,-17,12,-17C-4,-17,-17,-4,-17,12C-17,28,-4,41,12,41Z" fill="#3DDC84" opacity="0.15" />
+        <path d="M 0,5 L 24,5 C 24,11 19,16 12,16 C 5,16 0,11 0,5 Z" fill="#3DDC84" />
+        <rect x="0" y="5" width="24" height="2" fill="#0B132B" />
+        <circle cx="6" cy="10" r="1.5" fill="#0B132B" />
+        <circle cx="18" cy="10" r="1.5" fill="#0B132B" />
+        <path d="M 5,4 L 2,1 M 19,4 L 22,1" stroke="#3DDC84" stroke-width="2" stroke-linecap="round" />
+      </g>
+
+      <!-- Code Lines Abstract -->
+      <rect x="16" y="165" width="100" height="6" rx="3" fill="#3DDC84" opacity="0.9" />
+      <rect x="16" y="178" width="180" height="5" rx="2.5" fill="#7F52FF" opacity="0.8" />
+      <rect x="16" y="189" width="140" height="5" rx="2.5" fill="#0A66C2" opacity="0.8" />
+      <rect x="30" y="200" width="160" height="5" rx="2.5" fill="#64748B" opacity="0.6" />
+      <rect x="30" y="211" width="110" height="5" rx="2.5" fill="#64748B" opacity="0.6" />
+      <rect x="16" y="222" width="50" height="5" rx="2.5" fill="#3DDC84" opacity="0.8" />
+
+      <!-- Jetpack Compose UI Box Mock -->
+      <rect x="16" y="245" width="216" height="110" rx="12" fill="#1E293B" opacity="0.8" stroke="#3DDC84" stroke-width="1" />
+      <text x="30" y="268" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#F8FAFC">@Composable fun Profile()</text>
+      
+      <!-- Compose Logo Geometric Icon -->
+      <g transform="translate(170, 275) scale(0.75)" opacity="0.9">
+        <polygon points="15,0 30,10 30,30 15,40 0,30 0,10" fill="none" stroke="#7F52FF" stroke-width="2" />
+        <polygon points="15,5 25,12 25,27 15,35 5,27 5,12" fill="none" stroke="#3DDC84" stroke-width="1.5" />
+        <circle cx="15" cy="20" r="5" fill="#0A66C2" />
+      </g>
+
+      <!-- Row of UI Controls mock inside the screen -->
+      <rect x="30" y="285" width="110" height="8" rx="4" fill="#64748B" opacity="0.4" />
+      <rect x="30" y="300" width="80" height="8" rx="4" fill="#64748B" opacity="0.4" />
+      <rect x="30" y="315" width="120" height="15" rx="7.5" fill="url(#kotlinGrad)" opacity="0.8" />
+      <rect x="42" y="321" width="40" height="3" rx="1.5" fill="#FFFFFF" />
+
+      <!-- Base Home Indicator Bar -->
+      <rect x="74" y="410" width="100" height="4" rx="2" fill="#64748B" opacity="0.8" />
+    </g>
+  </g>
+
+  <!-- Left Side Floating Vector Tech Badge (Kotlin) -->
+  <g transform="translate(60, 240)" filter="url(#softShadow)">
+    <rect width="160" height="60" rx="16" fill="#1E293B" stroke="#7F52FF" stroke-width="1.5" />
+    <!-- Gradient Glow backdrop for icon -->
+    <rect x="12" y="12" width="36" height="36" rx="10" fill="url(#kotlinGrad)" />
+    <!-- Kotlin 'K' White Outline Icon -->
+    <path d="M 21,20 L 21,40 M 21,30 L 30,20 M 21,30 L 30,40" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 21,30 L 33,30" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.5" />
+    <!-- Text Labels -->
+    <text x="60" y="30" font-family="'Inter', sans-serif" font-size="14" font-weight="bold" fill="#F8FAFC">Kotlin</text>
+    <text x="60" y="45" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8">Nativo &amp; Robusto</text>
+  </g>
+
+  <!-- Right Side Floating Vector Tech Badge (Firebase) -->
+  <g transform="translate(560, 160)" filter="url(#softShadow)">
+    <rect width="170" height="60" rx="16" fill="#1E293B" stroke="#FFA611" stroke-width="1.5" />
+    <!-- Firebase Logo Holder -->
+    <rect x="12" y="12" width="36" height="36" rx="10" fill="#111827" />
+    <!-- Custom Firebase Flame/Shield SVG -->
+    <g transform="translate(20, 20) scale(0.8)">
+      <path d="M2.3,16.8 L5.4,3.2 C5.6,2.3 6.8,2.2 7.1,3.0 L10.5,9.6 L2.3,16.8 Z" fill="#FFA611" />
+      <path d="M15.4,16.8 L11.6,0.3 C11.3,-0.3 10.4,-0.0 10.3,0.7 L10.5,9.6 L15.4,16.8 Z" fill="#F5820D" opacity="0.85" />
+      <path d="M15.4,16.8 L11.2,12.0 L2.3,16.8 Z" fill="#FFA611" opacity="0.9" />
+      <path d="M10.5,9.6 L2.3,16.8 L15.4,16.8 L15.4,16.8 Z" fill="#F50057" opacity="0.15" />
+    </g>
+    <!-- Text Labels -->
+    <text x="60" y="30" font-family="'Inter', sans-serif" font-size="14" font-weight="bold" fill="#F8FAFC">Firebase</text>
+    <text x="60" y="45" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8">Backend Móvil</text>
+  </g>
+
+  <!-- Jetpack Compose floating block bottom-right -->
+  <g transform="translate(530, 360)" filter="url(#softShadow)">
+    <rect width="190" height="60" rx="16" fill="#1E293B" stroke="#3DDC84" stroke-width="1.5" />
+    <!-- Compose Hex Shield -->
+    <g transform="translate(20, 18) scale(0.6)">
+      <polygon points="15,0 30,10 30,30 15,40 0,30 0,10" fill="url(#androidGrad)" />
+      <!-- white inner symbol -->
+      <circle cx="15" cy="20" r="7" fill="none" stroke="#FFFFFF" stroke-width="3" />
+      <line x1="15" y1="20" x2="25" y2="10" stroke="#FFFFFF" stroke-width="3" />
+    </g>
+    <!-- Text Labels -->
+    <text x="60" y="30" font-family="'Inter', sans-serif" font-size="14" font-weight="bold" fill="#F8FAFC">Jetpack Compose</text>
+    <text x="60" y="45" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8">UI Moderna Nativa</text>
+  </g>
+
+  <!-- Subtle Android Robot Icon Top Left floating -->
+  <g transform="translate(80, 80) scale(0.9)" filter="url(#softShadow)">
+    <circle cx="30" cy="30" r="30" fill="#1E293B" stroke="#3DDC84" stroke-width="1" />
+    <g transform="translate(18, 18) scale(0.5)">
+      <path d="M 0,10 L 24,10 C 24,18 19,23 12,23 C 5,23 0,18 0,10" fill="#3DDC84" />
+      <rect x="0" y="10" width="24" height="2" fill="#1E293B" />
+      <!-- Eyes -->
+      <circle cx="6" cy="15" r="1.5" fill="#1E293B" />
+      <circle cx="18" cy="15" r="1.5" fill="#1E293B" />
+      <!-- Antennas -->
+      <line x1="5" y1="9" x2="2" y2="5" stroke="#3DDC84" stroke-width="2" stroke-linecap="round" />
+      <line x1="19" y1="9" x2="22" y2="5" stroke="#3DDC84" stroke-width="2" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Interactive/Code floating window snippet (bottom-left) -->
+  <g transform="translate(40, 410)" filter="url(#softShadow)">
+    <rect width="200" height="110" rx="14" fill="#0B1329" stroke="#64748B" stroke-width="1" stroke-opacity="0.4" />
+    <!-- IDE Dot Indicators -->
+    <circle cx="18" cy="18" r="3" fill="#EF4444" />
+    <circle cx="28" cy="18" r="3" fill="#F59E0B" />
+    <circle cx="38" cy="18" r="3" fill="#10B981" />
+    
+    <!-- Code line simulations -->
+    <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="9" fill="#94A3B8" xml:space="preserve">
+      <text x="15" y="42" fill="#7F52FF" font-weight="bold">data class <tspan fill="#3DDC84">Developer</tspan>(</text>
+      <text x="25" y="58" fill="#F8FAFC">  val <tspan fill="#0A66C2">name</tspan> = <tspan fill="#E44857">"Leandro"</tspan>,</text>
+      <text x="25" y="74" fill="#F8FAFC">  val <tspan fill="#0A66C2">expYears</tspan> = <tspan fill="#FFA611">8</tspan>,</text>
+      <text x="25" y="90" fill="#F8FAFC">  val <tspan fill="#0A66C2">native</tspan> = <tspan fill="#10B981">true</tspan></text>
+      <text x="15" y="102" fill="#7F52FF" font-weight="bold">)</text>
+    </g>
+  </g>
+</svg>
